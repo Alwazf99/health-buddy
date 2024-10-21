@@ -1,14 +1,40 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# HealthBuddy App
 
-# Getting Started
+## Overview
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+**HealthBuddy** is a React Native application designed to provide users with a seamless health tracking experience. The app includes a beautiful splash screen and is built using modern technologies to ensure optimal performance and user experience.This project is still in progress.
 
-## Step 1: Start the Metro Server
+## Features
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- Splash screen with smooth animations
+- Custom UI components for text and styling
+- Fully responsive design using `react-native-responsive-fontsize`
+- Uses `react-native-linear-gradient` for gradient effects
+- Built with scalability in mind
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Screens
+
+- **SplashScreen**: Displays an animated splash screen with a health-related logo and introduction text.
+- **HealthBuddyScreen**: Placeholder for the main functionality screen of the app.
+
+## Technologies Used
+
+- **React Native**: A popular framework for building mobile apps.
+- **react-navigation**: For navigation and routing between screens.
+- **react-native-linear-gradient**: To create smooth gradients.
+- **react-native-reanimated**: For animations in the app.
+- **react-native-vector-icons**: For using custom icons in the app.
+- **Custom Components**: Custom-built components like `CustomText` for handling consistent styling across the app.
+
+## Installation
+
+To run this project locally, follow the steps below:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/healthbuddy.git
+   ```
 
 ```bash
 # using npm
