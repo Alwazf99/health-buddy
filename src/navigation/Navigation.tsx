@@ -16,7 +16,13 @@ const Navigation: FC = () => {
           headerShown: false,
         }}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
-        <Stack.Screen name="HealthBuddyScreen" component={HealthBuddyScreen} />
+        <Stack.Screen
+          name="HealthBuddyScreen"
+          options={{
+            animation: 'fade',
+          }}
+          component={HealthBuddyScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

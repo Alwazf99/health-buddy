@@ -10,6 +10,9 @@ import {screenHeight, screenWidth} from '../utils/Scaling';
 import LinearGradient from 'react-native-linear-gradient';
 import CustomText from '../components/global/CustomText';
 import LottieView from 'lottie-react-native';
+import {initializeTtsListeners, playTTS} from '../utils/ttsListeners';
+import {resetAndNavigate} from '../utils/NavigationUtils';
+import {playSound} from '../utils/voiceUtils';
 
 const bottomColors = [...lightColors].reverse();
 
@@ -19,13 +22,20 @@ const SplashScreen: FC = () => {
 
   const launchAnimation = async () => {
     messageContainerAnimation.value = screenHeight * 0.001;
+    //playSound('ting2');
     setTimeout(() => {
       healthBuddyAnimation.value = -screenHeight * 0.02;
+      playTTS('Hello World! I am your Healthbuddy.');
     }, 600);
+
+    setTimeout(() => {
+      resetAndNavigate('HealthBuddyScreen');
+    }, 4000);
   };
 
   useEffect(() => {
     launchAnimation();
+    initializeTtsListeners();
   }, []);
 
   const animatedImageStyle = useAnimatedStyle(() => {
@@ -69,7 +79,7 @@ const SplashScreen: FC = () => {
             </CustomText>
             <LottieView
               source={require('../assets/animations/sync.json')}
-              style={{height: 100, width: 280}}
+              style={{height: 130, width: 280}}
               autoPlay={true}
               loop
             />
@@ -103,7 +113,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     width: screenWidth - 20,
-    height: screenHeight * 0.5,
+    height: screenHeight * 0.9,
   },
 
   img: {
@@ -113,12 +123,12 @@ const styles = StyleSheet.create({
   },
   gradientContainer: {
     position: 'absolute',
-    height: '30%',
+    height: '35%',
     bottom: 0,
     width: '100%',
   },
   gradient: {
-    paddingTop: 18,
+    paddingTop: 30,
     width: '100%',
     height: '100%',
   },

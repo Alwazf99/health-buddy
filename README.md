@@ -9,7 +9,7 @@
 - Splash screen with smooth animations
 - Custom UI components for text and styling
 - Fully responsive design using `react-native-responsive-fontsize`
-- Uses `react-native-linear-gradient` for gradient effects
+- Uses React Native tts for Text to Speech
 - Built with scalability in mind
 
 ## Screens
